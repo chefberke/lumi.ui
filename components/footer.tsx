@@ -18,7 +18,7 @@ export function Footer() {
               className="flex gap-1 items-center px-0 text-muted-foreground hover:text-foreground hover:no-underline"
             >
               Building in public by{" "}
-              <span className="font-semibold">Gonzalo Chalé</span>
+              <span className="font-semibold">lumi.work</span>
             </Button>
           </Link>
         </div>

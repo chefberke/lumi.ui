@@ -25,10 +25,10 @@ export function Header() {
         <nav className="max-md:hidden flex gap-10 w-full items-center">
           <Link href="/" className="flex gap-3 items-center">
             <h1 className="text-lg font-medium tracking-tighter flex gap-1 items-center">
-              Your UI Library
+              LumiUI
             </h1>
-            <Badge variant="outline" className="text-normal">
-              Beta
+            <Badge variant="outline" className="text-normal border-purple-500">
+              Beta v0.0.1
             </Badge>
           </Link>
           <div className="flex gap-10 items-center">

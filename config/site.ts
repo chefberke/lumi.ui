@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://x.com/gonzalochale",
   description:
     "A NextJS UI Library Starter Template with TypeScript, TailwindCSS, and MDX, create your own UI Library with ease.",
-  author: "Gonzalo Chalé",
+  author: "chefHarun",
   links: {
     twitter: "https://x.com/gonzalochale",
     github: "https://github.com/gonzalochale/chonza",
