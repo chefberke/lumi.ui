@@ -41,16 +41,19 @@ export function MobileNav() {
                 onClick={() => setOpen(false)}
                 className="flex flex-col items-center gap-3 justify-center"
               >
-                Your Library
-                <Badge variant="outline" className="text-normal">
-                  Beta
+                LumiUI
+                <Badge
+                  variant="outline"
+                  className="text-normal border-purple-500"
+                >
+                  Beta v0.0.1
                 </Badge>
               </Link>
             </SheetTitle>
             <ScrollArea className="flex flex-col gap-3">
-              <div className="flex flex-col gap-16 items-start mt-5">
-                <div className="flex flex-col gap-5 items-start">
-                  <span className="scroll-m-20 text-sm font-medium tracking-tight">
+              <div className="flex flex-col gap-12 items-start mt-5">
+                <div className="flex flex-col gap-3 items-start">
+                  <span className="scroll-m-20 text-[16px] font-semibold tracking-tight">
                     Getting Started
                   </span>
                   {siteConfig.docs.map((doc) => (
@@ -73,8 +76,8 @@ export function MobileNav() {
                     </Link>
                   ))}
                 </div>
-                <div className="flex flex-col gap-5 items-start">
-                  <span className="scroll-m-20 text-sm font-medium tracking-tight">
+                <div className="flex flex-col gap-3 items-start">
+                  <span className="scroll-m-20 text-[16px] font-semibold tracking-tight">
                     Components
                   </span>
                   {siteConfig.components.map((component) => (
@@ -84,16 +87,23 @@ export function MobileNav() {
                       className="flex flex-col items-start gap-1"
                       onClick={() => setOpen(false)}
                     >
-                      {component.new && <Badge variant="outline">New</Badge>}
                       <Button
                         variant="link"
                         size="sm"
                         className={cn(
-                          "hover:no-underline text-muted-foreground hover:text-foreground px-0",
+                          "hover:no-underline text-muted-foreground hover:text-foreground px-0 gap-2",
                           pathname === `${component.path}` && "text-foreground"
                         )}
                       >
                         {component.title}
+                        {component.new && (
+                          <Badge
+                            variant="outline"
+                            className="border-purple-500"
+                          >
+                            New
+                          </Badge>
+                        )}
                       </Button>
                     </Link>
                   ))}
