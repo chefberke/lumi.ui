@@ -10,35 +10,15 @@ export const siteConfig = {
   },
   docs: [
     {
-      title: "Getting Started",
-      path: "/docs/getting-started",
+      title: "Introduction",
+      path: "/docs",
       new: false,
-    },
-    {
-      title: "Installation",
-      path: "/docs/installation",
-      new: false,
-    },
-    {
-      title: "Theming",
-      path: "/docs/theming",
-      new: true,
     },
   ],
   components: [
     {
-      title: "Button",
-      path: "/components/button",
-      new: false,
-    },
-    {
-      title: "Card",
-      path: "/components/card",
-      new: false,
-    },
-    {
-      title: "Modal",
-      path: "/components/modal",
+      title: "Confetti",
+      path: "/components/confetti-button",
       new: true,
     },
   ],
