@@ -13,17 +13,13 @@ export const Sidebar = () => {
 
   return (
     <aside className="sticky top-[49px] gap-10 py-10 z-50 h-[calc(100dvh-98px)] w-full hidden md:block overflow-y-auto pr-5">
-      <div className="flex flex-col gap-12 h-full w-full">
-        <div className="flex flex-col gap-3 items-start">
+      <div className="flex flex-col gap-10 h-full w-full">
+        <div className="flex flex-col items-start">
           <span className="scroll-m-20 text-[16px] font-semibold tracking-tight">
             Getting Started
           </span>
           {siteConfig.docs.map((doc) => (
-            <Link
-              key={doc.path}
-              href={doc.path}
-              className="flex items-center gap-3"
-            >
+            <Link key={doc.path} href={doc.path} className="flex items-center ">
               <Button
                 variant="link"
                 size="lg"
@@ -37,7 +33,7 @@ export const Sidebar = () => {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col gap-3 items-start">
+        <div className="flex flex-col items-start">
           <span className="scroll-m-20 text-[16px] font-semibold tracking-tight">
             Components
           </span>

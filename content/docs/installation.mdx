@@ -1,0 +1,107 @@
+---
+title: Installation
+description: How to install dependencies and structure your app.
+date: 2025-01-29
+---
+
+# Installation
+
+This guide provides step-by-step instructions on how to add the **@lumi-work/lumi-ui** component library to your Next.js project.
+
+## 1. Install Required Dependencies
+
+Lumi UI requires **Tailwind CSS** and **TypeScript**. If you haven't installed them in your project yet, follow the steps below.
+
+### **Installing Tailwind CSS**
+
+If Tailwind CSS is not already installed, run the following command:
+
+<CodeBlockWrapper size="full">
+```sh
+npm install -D tailwindcss postcss autoprefixer
+```
+</CodeBlockWrapper>
+
+Then generate the configuration files:
+
+<CodeBlockWrapper size="full">
+```sh
+npx tailwindcss init -p
+```
+</CodeBlockWrapper>
+
+### **Installing TypeScript**
+
+Lumi UI works with TypeScript. If TypeScript is not yet installed in your project, install it using:
+
+<CodeBlockWrapper size="full">
+```sh
+npm install -D typescript @types/react @types/node
+```
+</CodeBlockWrapper>
+
+Ensure you have a **tsconfig.json** file in your project root directory:
+
+<CodeBlockWrapper size="full">
+```sh
+npx tsc --init
+```
+</CodeBlockWrapper>
+
+---
+
+## 2. Install the Lumi UI Component Library
+
+Use one of the following commands to install Lumi UI in your project:
+
+<CodeBlockWrapper size="full">
+```sh
+# Install with npm
+npm install @lumi-work/lumi-ui
+
+# Or with pnpm
+pnpm add @lumi-work/lumi-ui
+
+# Or with yarn
+yarn add @lumi-work/lumi-ui
+
+# Or with bun
+bun add @lumi-work/lumi-ui
+```
+</CodeBlockWrapper>
+
+---
+
+## 3. Update Tailwind CSS `content` Configuration
+
+To ensure Tailwind CSS scans the **node_modules** directory for Lumi UI components, update the `content` section in your `tailwind.config.js` file as follows:
+
+<CodeBlockWrapper size="full">
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // Other things
+    "./node_modules/@lumi-work/lumi-ui/**/*.{js,ts,jsx,tsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+</CodeBlockWrapper>
+
+---
+
+## 4. Restart Your Project
+
+For the changes to take effect, restart your Next.js development server:
+
+<CodeBlockWrapper size="full">
+```sh
+npm run dev
+```
+</CodeBlockWrapper>
+
+You're now ready to use **@lumi-work/lumi-ui** components! 🎉
