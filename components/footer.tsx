@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="bg-background">
+    <footer className="bg-background z-10">
       <div className="max-md:px-4 md:container h-12 flex justify-start items-center">
         <div className="flex gap-3 items-center justify-end">
           <Link

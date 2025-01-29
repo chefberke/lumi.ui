@@ -44,7 +44,7 @@ export default function CodeBlockWrapper({
   if (size === "full") {
     return (
       <div
-        className="overflow-hidden border rounded-[1rem] bg-card relative"
+        className="overflow-hidden border border-gray-900/20 rounded-[1rem] bg-card relative"
         ref={codeRef}
       >
         {children}
@@ -65,7 +65,7 @@ export default function CodeBlockWrapper({
     return (
       <div
         className={cn(
-          "relative grid overflow-hidden border rounded-[1rem] bg-card",
+          "relative grid overflow-hidden border border-gray-900/20 rounded-[1rem] bg-card",
           open ? "h-auto" : "h-[400px]"
         )}
       >

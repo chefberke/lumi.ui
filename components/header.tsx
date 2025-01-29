@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
-      <div className="max-md:px-4 md:container h-12 flex justify-center items-center">
+      <div className="max-md:px-4 md:container h-16 flex justify-center items-center">
         <MobileNav />
         <nav className="max-md:hidden flex gap-10 w-full items-center">
           <Link href="/" className="flex gap-3 items-center">
@@ -31,7 +31,7 @@ export function Header() {
               Beta v0.0.1
             </Badge>
           </Link>
-          <div className="flex gap-10 items-center">
+          <div className="flex gap-4 items-center">
             <Link href="/docs">
               <Button
                 variant="link"
@@ -41,7 +41,7 @@ export function Header() {
                   pathname.includes("docs") && "text-foreground"
                 )}
               >
-                Docs
+                <span className="font-semibold text-[14px]">Docs</span>
               </Button>
             </Link>
             <Link href={newComponent.path}>
@@ -53,7 +53,7 @@ export function Header() {
                   pathname.includes("components") && "text-foreground"
                 )}
               >
-                Components
+                <span className="font-semibold text-[14px]">Components</span>
               </Button>
             </Link>
           </div>
@@ -66,12 +66,11 @@ export function Header() {
             aria-label="Follow on Twitter"
           >
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
               aria-label="Follow on Twitter"
             >
-              <span className="hidden md:block">Follow on</span>{" "}
               <Icons.twitter />
             </Button>
           </Link>
@@ -82,12 +81,11 @@ export function Header() {
             aria-label="Give a star on GitHub"
           >
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
               aria-label="Give a star on GitHub"
             >
-              <span className="hidden md:block">Give a star</span>{" "}
               <Icons.github />
             </Button>
           </Link>
