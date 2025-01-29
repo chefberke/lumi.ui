@@ -1,24 +1,44 @@
 export const siteConfig = {
-  name: "Chonza - NextJS UI Library Docs Template",
-  url: "https://x.com/gonzalochale",
+  name: "LumiUI - Next.js UI Component Library",
+  url: "https://lumiui.dev",
   description:
-    "A NextJS UI Library Starter Template with TypeScript, TailwindCSS, and MDX, create your own UI Library with ease.",
-  author: "chefHarun",
+    "LumiUI is a modern, TypeScript-powered UI Component Library for Next.js and React. Built with TailwindCSS, it offers high-performance, accessible, and customizable components for seamless UI development.",
+  author: "Lumi.Work",
   links: {
-    twitter: "https://x.com/gonzalochale",
-    github: "https://github.com/gonzalochale/chonza",
+    twitter: "https://x.com/works_lumi",
+    github: "https://github.com/lumi-work",
   },
   docs: [
     {
-      title: "Introduction",
-      path: "/docs",
+      title: "Getting Started",
+      path: "/docs/getting-started",
       new: false,
+    },
+    {
+      title: "Installation",
+      path: "/docs/installation",
+      new: false,
+    },
+    {
+      title: "Theming",
+      path: "/docs/theming",
+      new: true,
     },
   ],
   components: [
     {
-      title: "Confetti",
-      path: "/components/confetti-button",
+      title: "Button",
+      path: "/components/button",
+      new: false,
+    },
+    {
+      title: "Card",
+      path: "/components/card",
+      new: false,
+    },
+    {
+      title: "Modal",
+      path: "/components/modal",
       new: true,
     },
   ],
