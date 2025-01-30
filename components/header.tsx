@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
@@ -89,7 +88,6 @@ export function Header() {
               <Icons.github />
             </Button>
           </Link>
-          <ThemeSwitcher />
         </div>
       </div>
     </header>
