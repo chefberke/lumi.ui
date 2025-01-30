@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "./mobile-nav";
 import { Badge } from "./ui/badge";
+import { useEffect, useState } from "react";
 
 export function Header() {
   const pathname = usePathname();
@@ -16,6 +17,25 @@ export function Header() {
     siteConfig.components.length > 0
       ? siteConfig.components[0]
       : siteConfig.docs[0];
+
+  const getRepoStars = async () => {
+    const res = await fetch("https://api.github.com/repos/lumi-work/lumi.ui", {
+      cache: "no-store",
+    });
+    const data = await res.json();
+    return data.stargazers_count;
+  };
+
+  const [stars, setStars] = useState(0);
+
+  useEffect(() => {
+    const fetchRepoStars = async () => {
+      const starsCount = await getRepoStars();
+      setStars(starsCount);
+    };
+
+    fetchRepoStars();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
@@ -73,21 +93,24 @@ export function Header() {
               <Icons.twitter />
             </Button>
           </Link>
-          <Link
-            href={siteConfig.links.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Give a star on GitHub"
-          >
-            <Button
-              variant="ghost"
-              size="sm"
-              className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
-              aria-label="Give a star on GitHub"
+          <div className="flex gap-2 justify-center">
+            <a
+              href="https://github.com/lumi-work/lumi.ui"
+              className="no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Icons.github />
-            </Button>
-          </Link>
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 group"
+              >
+                <span className="transition-all duration-300 ease-in-out">
+                  {stars || 0}
+                </span>
+                {stars === 1 ? "star" : "stars"} on GitHub <Icons.github />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </header>
