@@ -8,7 +8,7 @@ export default async function Home() {
         <section className="w-full h-full max-w-full container px-4 py-16 sm:py-20 md:py-24 flex flex-col items-center justify-center text-center">
           <div className="flex flex-col justify-center space-y-4 text-center z-10 w-full max-w-5xl">
             <div className="space-y-2">
-              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   LumiUI{" "}
                 </span>
@@ -17,7 +17,7 @@ export default async function Home() {
                   Next.js
                 </span>
               </span>
-              <p className="w-full px-4 sm:px-6 md:px-10 text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/40">
+              <p className="w-full px-4 sm:px-6 md:px-10 text-base sm:text-lg md:text-xl lg:text-lg xl:text-lg text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/40">
                 Built with TypeScript and TailwindCSS, it offers beautifully
                 crafted, <br className="hidden sm:inline" /> accessible
                 components to speed up your development workflow.
