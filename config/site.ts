@@ -19,6 +19,11 @@ export const siteConfig = {
       path: "/docs/installation",
       new: false,
     },
+    {
+      title: "Usage Guide",
+      path: "/docs/usage-guide",
+      new: false
+    }
   ],
   components: [
     {
